@@ -2,7 +2,7 @@ if exists("b:current_syntax")
   finish
 endif
 
-syntax match taskKeyword "\s@.w" contained
+syntax match taskKeyword "\s@\w\+" contained
 
 syntax match taskWorkingIcon "^-" contained
 syntax match taskWorkingIcon "^\s*-" contained
@@ -14,7 +14,7 @@ syntax match taskWorkingItem "^\s*-.*" contains=taskWorkingIcon,taskKeyword
 syntax match taskDoneItem "^•.*" contains=taskDoneIcon,taskKeyword
 syntax match taskDoneItem "^\s*•.*" contains=taskDoneIcon,taskKeyword
 
-highlight taskKeyword guifg=#96CBFE guibg=NONE gui=NONE ctermfg=blue ctermbg=black cterm=NONE
+highlight taskKeyword guifg=#96CBFE guibg=NONE gui=NONE ctermfg=blue ctermbg=NONE cterm=NONE
 
 highlight taskWorkingItem guifg=#f6f3e8 guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 highlight taskDoneItem guifg=#555555 guibg=NONE gui=italic ctermfg=grey ctermbg=NONE cterm=NONE
