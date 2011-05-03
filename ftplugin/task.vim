@@ -11,7 +11,7 @@ set cpo&vim
 function! Toggle_task_status()
 ruby << EOS
   line = VIM::Buffer.current.line
-  line = line.gsub(/^(\s*)([-✓])/u) { $1 + ( $2 == '-' ? '✓' : '-' ) }
+  line = line.gsub(/^(\s*)([-•])/u) { $1 + ( $2 == '-' ? '•' : '-' ) }
   VIM::Buffer.current.line = line
 EOS
 endfunction
